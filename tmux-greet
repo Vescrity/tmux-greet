@@ -1,0 +1,9 @@
+#!/bin/bash
+tmux kill-server
+# main session
+tmux new-session -d -s main
+tmux rename-window -t main:0 'Greet'
+tmux send-keys -t main:0 "/etc/tmux-greet/tmux-greet-startup" Enter
+
+tmux a
+
