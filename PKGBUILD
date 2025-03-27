@@ -1,7 +1,8 @@
+# Maintainer: Vescrity
 pkgname=tmux-greet-git
 pkgver="0.2.1"
-pkgrel=1
-pkgdesc='tmux'
+pkgrel=2
+pkgdesc='Launch tuigreet in tmux.'
 arch=(any)
 depends=(
     tmux
