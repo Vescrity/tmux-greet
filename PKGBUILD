@@ -1,7 +1,8 @@
 # Maintainer: Vescrity
 pkgname=tmux-greet-git
-pkgver="0.2.1"
-pkgrel=2
+pkgver="0"
+pkgrel=1
+epoch=1
 pkgdesc='Launch tuigreet in tmux.'
 arch=(any)
 depends=(
@@ -20,7 +21,7 @@ sha256sums=('SKIP')
 backup=(etc/tmux-greet/tmux-greet-startup)
 pkgver() {
     cd "$srcdir/tmux-greet"
-    printf "$pkgver.g%s" "$(git rev-parse --short HEAD)"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
 }
 package() {
   cd "$srcdir/tmux-greet"
